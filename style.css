@@ -1,0 +1,110 @@
+:root {
+  --bgColor: hsl(218, 23%, 16%);
+  --primaryOne: hsl(193, 38%, 86%);
+  --primaryTwo: hsl(150, 100%, 66%);
+  --boxColor: hsl(217, 19%, 24%);
+}
+
+/* FrontEnd Mentor Default styles */
+.attribution {
+  position: absolute;
+  font-size: 11px;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: var(--primaryOne);
+}
+.attribution a {
+  color: hsl(218, 23%, 16%);
+  color: var(--primaryOne);
+}
+/* ------------------------------- */
+
+/* CSS Reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Manrope', sans-serif;
+  background: var(--bgColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#advice-box {
+  position: relative;
+  background: var(--boxColor);
+  width: 480px;
+  height: 320px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#advice-box #advice-title {
+  color: var(--primaryTwo);
+  text-align: center;
+  padding: 35px;
+}
+
+#advice-box #advice-text {
+  color: var(--primaryOne);
+  text-align: center;
+  font-size: 22px;
+  padding: 0px 20px 0px 20px;
+}
+
+#advice-box .desktop-divider {
+  margin: auto;
+}
+
+#advice-box .mobile-divider {
+  display: none;
+}
+
+.dice {
+  border-radius: 100%;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  bottom: -30px;
+  margin-left: 2px;
+  background-color: var(--primaryTwo);
+}
+
+.dice .dice-svg {
+  position: absolute;
+  margin: auto;
+  top: 16px;
+  right: 16px;
+}
+
+.dice #generate {
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  #advice-box {
+    width: 350px;
+    height: 360px;
+  }
+
+  #advice-box .desktop-divider {
+    display: none;
+  }
+  #advice-box .mobile-divider {
+    display: block;
+    margin: auto;
+  }
+}
